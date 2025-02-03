@@ -1,0 +1,160 @@
+:root {
+    --primary: #8A2061;
+    --black: #000;
+    --white: #fff;
+    --white-smoke: #f1f1f1;
+    --gray-80: #ddd;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Regular.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watermark-img {
+    opacity: 0.1;
+    width: 80%;
+    height: auto;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.h-60 {
+    height: 80px;
+}
+
+.table-highlited {
+    background-color: var(--white-smoke);
+    color: var(--black);
+    font-size: 18px;
+    text-align: center !important;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.vaccine-card-border {
+    margin: 10px;
+    border: 2px solid var(--primary);
+    z-index: -1;
+}
+
+.header-section {
+    margin: 2px;
+}
+
+.header-img {
+    width: 100%;
+    height: 120px;
+}
+
+.vaccine-section {
+    margin: 10px;
+}
+
+.user-img-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-img {
+    height: 140px;
+    width: 120px;
+}
+
+.vaccine-table-container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.vaccine-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vaccine-table td {
+    padding: 5px;
+    border: 1px solid var(--gray-80);
+    width: 25%;
+}
+
+.table-header {
+    color: var(--black);
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 0 !important;
+}
+
+.qr-container {
+    margin: 30px 0 10px 20px;
+}
+
+.qr-img {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.footer-url {
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+    font-style: italic;
+}
+
+@media print {
+    .table-header {
+        font-size: 24px;
+    }
+
+    .table-highlited {
+        font-size: 20px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .vaccine-table td {
+        padding: 8px;
+    }
+
+    .vaccine-card-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
